@@ -5,7 +5,7 @@
 *.classpath
 *.project
 *.settings
-*/bin/*
+/bin/*
 /target/*
 
 #gradle
@@ -32,6 +32,7 @@
 .project
 .classpath
 .settings
+bin/
 
 # Netbeans
 nbactions*.xml
