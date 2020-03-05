@@ -7,7 +7,8 @@ import java.util.List;
 
 public class TesteLeituraLista {
 	public static void main(String[] args) throws Exception {
-		File f = new File("C:/temp/tmp2/lista.dat");
+//		File f = new File("C:/temp/tmp2/lista.dat");
+		File f = new File("/home/ale/Downloads/lista.dat");
 		FileInputStream fin = new FileInputStream(f);
 		ObjectInputStream objIn = new ObjectInputStream(fin);
 		List<String> obj = (List<String>) objIn.readObject();

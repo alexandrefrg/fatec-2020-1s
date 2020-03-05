@@ -13,7 +13,8 @@ public class TesteGravacaoLista {
 	public static void main(String[] args) throws Exception {
 		String textos[] = { "Jo�o", "Alberto", "Maria", "Cleuza" };
 		List<String> nomes = Arrays.asList(textos);
-		File f = new File("C:/temp/tmp2/lista.dat");
+//		File f = new File("C:/temp/tmp2/lista.dat");
+		File f = new File("/home/ale/Downloads/lista.dat");
 		FileOutputStream fout = new FileOutputStream(f);
 		ObjectOutputStream objOut = new ObjectOutputStream(fout);
 		objOut.writeObject(nomes);
