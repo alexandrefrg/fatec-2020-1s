@@ -31,19 +31,23 @@ public class CopiarArquivo {
 		File arqOrigem = new File(nmArqOrigem);
 		FileReader fr = new FileReader(arqOrigem);
 		BufferedReader readerArq = new BufferedReader(fr);
+		
+		File arqDestino = new File(nmArqDestino);
+		FileWriter fw = new FileWriter(arqDestino);
+		BufferedWriter writerArq = new BufferedWriter(fw);
+		
 		String linha = readerArq.readLine();
+		String conteudo = new String();
 		while (linha != null) {
+			conteudo += linha + "\n";
 			linha = readerArq.readLine();
 		}
 		fr.close();
 		
-		linha = new String();
-		File arqDestino = new File(nmArqDestino);
-		FileWriter fw = new FileWriter(arqDestino);
-		BufferedWriter writerArq = new BufferedWriter(fw);
-		while (linha != null) {
-			fw.write(linha);
-		}
+		System.out.println(writerArq.toString());
 		
+		fw.write(conteudo);
+		fw.flush();
+		fw.close();
 	}
 }
