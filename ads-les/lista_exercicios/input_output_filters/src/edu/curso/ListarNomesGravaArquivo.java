@@ -5,23 +5,26 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
 
-public class ConverterCaracteres {
+public class ListarNomesGravaArquivo {
 	public static void main(String[] args) {
-		char[] charArray = { 'I', 'Z', 'E', 'A', 'S', 'G', 'T', 'B', 'q', 'O' };
-		char[] charTroca = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+		char[] charArray = { 'O', 'I', 'Z', 'E', 'A', 'S', 'G', 'T', 'B', };
+		char[] charTroca = { '0', '1', '2', '3', '4', '5', '6', '7', '8', };
 		try {
 //			File f = new File("C:/texto.txt");
 			File f = new File("/home/ale/Downloads/texto.txt");
 			FileWriter fw = new FileWriter(f);
 			InputStreamReader in = new InputStreamReader(System.in);
 			BufferedReader reader = new BufferedReader(in);
+
 			System.out.println("Digite um nome, quando quiser finalizar digite sair");
-			String nome = "";
+			String nome = new String();
+
 			while (!nome.equals("sair")) {
 				nome = reader.readLine();
-				if (nome.equals("sair"))
+
+				if (nome.equals("sair")) {
 					fw.close();
-				else {
+				} else {
 					String nomeAlterado = new String();
 					int cont = 0;
 					for (char c : charArray) {

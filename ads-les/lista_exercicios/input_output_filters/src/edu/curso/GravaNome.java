@@ -6,9 +6,9 @@ import java.io.IOException;
 
 public class GravaNome {
 	public static void main(String[] args) {
-//		File f = new File("C:/nome.txt");
-		File f = new File("/home/ale/Downloads/nome.txt");
 		try {
+//			File f = new File("C:/nome.txt");
+			File f = new File("/home/ale/Downloads/nome.txt");
 			FileWriter fw = new FileWriter(f);
 			fw.write("Alexandre Freire Garcia");
 			fw.flush();
