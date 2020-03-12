@@ -29,7 +29,7 @@ public class Job implements Runnable {
 				}
 			}
 			float porcentagem = i * 100 / vetor.length;
-			System.out.printf("%s - executando %6f%%\n", nome, porcentagem);
+			System.out.printf("%s - executando %6.0f%%\n", nome, porcentagem);
 		}
 		StringBuffer sb = new StringBuffer(nome + " - Ordenação concluída\n");
 		for (int i : vetor) {
